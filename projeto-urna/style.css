@@ -1,3 +1,8 @@
+@keyframes pisca {
+    0% { opacity: 0.2;}
+    50% { opacity: 1;}
+    100% { opacity: 0.2;}
+}
 body{
     margin: 0;
     display: flex;
@@ -90,6 +95,18 @@ align-items: center;
 
 .numero{
 display: inline-block;
+width: 30px;
+height: 40px;
+border: 1px solid #000;
+text-align: center;
+line-height: 40px;
+font-size: 25px;
+}
+
+.pisca{
+    animation-name: pisca;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 .d-1-4{
     flex: 1;
@@ -98,24 +115,44 @@ display: inline-block;
 
 .d-1-right{
 width: 90px;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
 }
 
 .d-1-image{
-    border: 1px solid, #000;
+    border: 1px solid #000;
     background-color: #fff;
     text-align: center;
+    font-size: 14px;
 }
 
 .d-1-image img{
     width: 100%;
+    
 }
 
 .d-1-image.small{
     width: 70%;
+    font-size: 12px;
 }
 .d-2{
 height: 50px;
 font-size: 13px;
 border-top: 2px solid #000;
 padding-left: 10px;
+}
+
+.aviso--grande{
+    font-size: 35px;
+    font-weight: bold;
+}
+.aviso--gigante{
+    font-size: 60px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
 }
